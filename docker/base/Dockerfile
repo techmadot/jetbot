@@ -79,8 +79,8 @@ RUN echo -e "\e[48;5;172m Install Jupyter Lab \e[0m"
 RUN apt-get update
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get install -y nodejs libffi-dev 
-RUN pip3 install jupyter jupyterlab==2.2.6
+RUN apt-get install -y nodejs libffi-dev python3-dev libzmq3-dev
+RUN pip3 install jupyter jupyterlab==2.2.6 serial
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 
